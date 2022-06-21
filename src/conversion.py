@@ -1,5 +1,6 @@
 import numpy as np
-#Error and exception handling will be under compressor
+#Error and exception handling will be under main
+#Test file coming soon
 
 # calculate non zero svd values
 def calculateImportant(svdMatrix):
