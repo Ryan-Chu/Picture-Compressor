@@ -17,12 +17,14 @@ def calculateImportant(svdMatrix):
 def convertMatrix(workingMatrix, differentsvd = 0):
     u, s, v = np.linalg.svd(workingMatrix)
     i = calculateImportant(u)
-    m, n = workingMatrix.shape
-    Newpicture = np.zeros(m,n)
+    m, n= workingMatrix.shape
+    Newpicture = np.zeros((m,n))
     if(differentsvd != 0):
         Newpicture[:,:] = s[differentsvd]*np.outer(u[:,differentsvd]),np.transpose(v[differentsvd,:])
         return Newpicture
     else:
-        Newpicture[:,:] = s[i]*np.outer(u[:,i]),np.transpose(v[i,:])
+        Newpicture = np.dot(u[:,:i],np.dot(np.diag(s[:i]),v[:i,:]))
+
+        #Newpicture = s[:i]*np.outer(u[:,i]),np.transpose(v[:i,:])
         return Newpicture
 
