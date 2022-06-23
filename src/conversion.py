@@ -10,7 +10,7 @@ def convertMatrix(workingMatrix, differentsvd = 0):
     m, n= workingMatrix.shape
     Newpicture = np.zeros((m,n))
     if(differentsvd != 0):
-        Newpicture = (u[:,:i]@np.diag(s[:i])@(v[:i,:]))
+        Newpicture = (u[:,:differentsvd]@np.diag(s[:differentsvd])@(v[:differentsvd,:]))
         return Newpicture
     else:
         Newpicture = (u[:,:i]@np.diag(s[:i])@(v[:i,:]))
