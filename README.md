@@ -7,8 +7,8 @@ Easily and optimally shrink your picture's file size.
  
  ```
 Options:
-  -svd (Choose desired number of data bits to keep or percent to keep.)
-  -help (Show required inputs.)
+  -image name (Name of the input file.)
+  -output name (Name of output file.)
 
 Input:
   -png, pdf, or JPEG
@@ -24,14 +24,15 @@ $ git clone https://github.com/Ryan-Chu/Picture-Compressor.git
 # Go into the repository
 $ cd Picture-Compressor
 
-#Input desired image to be compressed into Images folder
-$ cd /your/image/path Picture-Compressor/Images/
+#Put desired image to be compressed into project's Images folder
+$ mv /your/image/path Picture-Compressor/Images/
 
 #Run app
-$ python main.py imageDesired.png
+$ python3 main.py imageDesired.jpg outputname.jpg
 ```
 ## Credits
 
 This software uses the following open source packages:
 
   -[NumPy](https://numpy.org/install/)
+  -[Matplotlib](https://matplotlib.org/stable/users/installing/index.html)
