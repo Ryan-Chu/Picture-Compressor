@@ -35,4 +35,5 @@ $ python3 main.py imageDesired.jpg outputname.jpg
 This software uses the following open source packages:
 
   -[NumPy](https://numpy.org/install/)
+  
   -[Matplotlib](https://matplotlib.org/stable/users/installing/index.html)
